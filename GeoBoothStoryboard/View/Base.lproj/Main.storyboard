@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kdo-1F-84e">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection-->
+        <scene sceneID="uX1-6o-jD0">
+            <objects>
+                <navigationController id="BOs-C6-srZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Collection" image="rectangle.stack" catalog="system" id="Sye-4T-A7p"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="393-SB-aI2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QNj-et-kNn" kind="relationship" relationship="rootViewController" id="oit-Uh-Ghx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baI-DR-oXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2259" y="226"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="E7G-8f-M7x">
+            <objects>
+                <navigationController id="7OB-N9-vg7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="GQs-tj-gXB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="5ST-gd-QcK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sFe-ag-l28" kind="relationship" relationship="rootViewController" id="2sI-mp-Fbc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5e-Ae-1Ij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2259" y="-580"/>
+        </scene>
+        <!--Places of Memories-->
+        <scene sceneID="ydx-vx-sYT">
+            <objects>
+                <viewController id="sFe-ag-l28" customClass="MapViewController" customModule="GeoBoothStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXi-8x-T37">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" showsPointsOfInterest="NO" showsUserTrackingButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-Lc-4iY">
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BAW-jK-Jdz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BAW-jK-Jdz" firstAttribute="bottom" secondItem="ovE-Lc-4iY" secondAttribute="bottom" id="EA3-NO-jE5"/>
+                            <constraint firstItem="BAW-jK-Jdz" firstAttribute="trailing" secondItem="ovE-Lc-4iY" secondAttribute="trailing" id="dFX-hI-Tug"/>
+                            <constraint firstItem="ovE-Lc-4iY" firstAttribute="top" secondItem="BAW-jK-Jdz" secondAttribute="top" id="dd9-gE-SAM"/>
+                            <constraint firstItem="ovE-Lc-4iY" firstAttribute="leading" secondItem="BAW-jK-Jdz" secondAttribute="leading" id="z7Z-dS-sfN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Places of Memories" largeTitleDisplayMode="always" id="jhW-b9-NyF"/>
+                    <connections>
+                        <outlet property="mapView" destination="ovE-Lc-4iY" id="QJX-nc-qyr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1I-tb-kse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3172" y="-580"/>
+        </scene>
+        <!--GeoBooth-->
+        <scene sceneID="5pY-xc-Rkd">
+            <objects>
+                <viewController id="QNj-et-kNn" customClass="CollectionViewController" customModule="GeoBoothStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WUN-O1-EiX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-vi-6xR">
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Empty State Label">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R3F-7U-YkJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R3F-7U-YkJ" firstAttribute="bottom" secondItem="y4x-vi-6xR" secondAttribute="bottom" id="1qo-xe-YLu"/>
+                            <constraint firstItem="y4x-vi-6xR" firstAttribute="top" secondItem="R3F-7U-YkJ" secondAttribute="top" id="eL0-Gx-z9D"/>
+                            <constraint firstItem="y4x-vi-6xR" firstAttribute="leading" secondItem="R3F-7U-YkJ" secondAttribute="leading" id="jhi-af-TDa"/>
+                            <constraint firstItem="R3F-7U-YkJ" firstAttribute="trailing" secondItem="y4x-vi-6xR" secondAttribute="trailing" id="rJe-ti-696"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="nUR-Ya-bTu"/>
+                    <navigationItem key="navigationItem" title="GeoBooth" largeTitleDisplayMode="always" id="fF3-ev-JFD">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="CRf-Gu-c6I">
+                            <connections>
+                                <action selector="rightNavButtonTap:" destination="QNj-et-kNn" id="z6m-on-Ncf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emptyStateLabel" destination="y4x-vi-6xR" id="lFc-MA-ksk"/>
+                        <segue destination="tm8-cr-fMh" kind="presentation" identifier="showModalSegue" id="J73-Ye-H3B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Brk-el-eri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3171.7557251908397" y="224.64788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tQC-Z3-YQQ">
+            <objects>
+                <navigationController id="tm8-cr-fMh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KWY-9h-4JQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QYS-0E-iYc" kind="relationship" relationship="rootViewController" id="sYD-We-sXZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKB-40-ASL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4050" y="225"/>
+        </scene>
+        <!--Add New Album-->
+        <scene sceneID="gti-xh-ksN">
+            <objects>
+                <viewController id="QYS-0E-iYc" customClass="AddAlbumViewController" customModule="GeoBoothStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2cL-TQ-svF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZC-re-Bns">
+                                <rect key="frame" x="16" y="56" width="361" height="506"/>
+                                <connections>
+                                    <segue destination="paO-sN-JZB" kind="embed" id="u6Y-US-dYL"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4uj-v9-fC7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LZC-re-Bns" firstAttribute="top" secondItem="4uj-v9-fC7" secondAttribute="top" id="Yk8-kg-Xie"/>
+                            <constraint firstItem="4uj-v9-fC7" firstAttribute="trailing" secondItem="LZC-re-Bns" secondAttribute="trailing" constant="16" id="cNM-TY-6Wh"/>
+                            <constraint firstItem="LZC-re-Bns" firstAttribute="leading" secondItem="4uj-v9-fC7" secondAttribute="leading" constant="16" id="tkb-ox-g1a"/>
+                            <constraint firstItem="4uj-v9-fC7" firstAttribute="bottom" secondItem="LZC-re-Bns" secondAttribute="bottom" constant="280" id="y1B-hK-P2r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Album" id="HyQ-Z2-yxP">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Iui-NV-faS">
+                            <connections>
+                                <action selector="closeModal:" destination="QYS-0E-iYc" id="BWN-fg-HKx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glR-LJ-GUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4885" y="225"/>
+        </scene>
+        <!--Add New Album-->
+        <scene sceneID="5i3-Dd-GPW">
+            <objects>
+                <tableViewController title="Add New Album" id="paO-sN-JZB" customClass="AddAlbumTableViewController" customModule="GeoBoothStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="T7D-5j-sWS">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="506"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="ubq-62-uJV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" id="Pc2-gQ-5KU">
+                                        <rect key="frame" x="0.0" y="1" width="361" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pc2-gQ-5KU" id="PvX-4M-OMg">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Album Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JqJ-qF-CRC">
+                                                    <rect key="frame" x="24" y="16" width="313" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JqJ-qF-CRC" firstAttribute="leading" secondItem="PvX-4M-OMg" secondAttribute="leading" constant="24" id="HIL-q6-fAi"/>
+                                                <constraint firstItem="JqJ-qF-CRC" firstAttribute="top" secondItem="PvX-4M-OMg" secondAttribute="top" constant="16" id="een-p1-0ll"/>
+                                                <constraint firstAttribute="trailing" secondItem="JqJ-qF-CRC" secondAttribute="trailing" constant="24" id="w8v-sD-83t"/>
+                                                <constraint firstAttribute="bottom" secondItem="JqJ-qF-CRC" secondAttribute="bottom" constant="16" id="xxc-iP-XLx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="zmG-WP-6IA">
+                                        <rect key="frame" x="0.0" y="52" width="361" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zmG-WP-6IA" id="Qjt-hz-klK">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-Z3-3NB">
+                                                    <rect key="frame" x="24" y="8" width="313" height="284"/>
+                                                    <standardMapConfiguration key="preferredConfiguration"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Xwd-Z3-3NB" secondAttribute="bottom" constant="8" id="7cF-PU-IcH"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xwd-Z3-3NB" secondAttribute="trailing" constant="24" id="Z83-Ve-vtJ"/>
+                                                <constraint firstItem="Xwd-Z3-3NB" firstAttribute="top" secondItem="Qjt-hz-klK" secondAttribute="top" constant="8" id="biX-Mg-gQ9"/>
+                                                <constraint firstItem="Xwd-Z3-3NB" firstAttribute="leading" secondItem="Qjt-hz-klK" secondAttribute="leading" constant="24" id="o2Z-iV-lXE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vuY-Pm-tmI">
+                                        <rect key="frame" x="0.0" y="352" width="361" height="50.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vuY-Pm-tmI" id="bah-qv-ecp">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="50.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daX-9a-mbT">
+                                                    <rect key="frame" x="8" y="8" width="345" height="34.666666666666664"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Add New Album"/>
+                                                    <connections>
+                                                        <action selector="doAddAlbum:" destination="paO-sN-JZB" eventType="touchUpInside" id="EOW-lY-RUa"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="daX-9a-mbT" firstAttribute="leading" secondItem="bah-qv-ecp" secondAttribute="leading" constant="8" id="Im0-D1-lwm"/>
+                                                <constraint firstAttribute="bottom" secondItem="daX-9a-mbT" secondAttribute="bottom" constant="8" id="S1S-7S-YIp"/>
+                                                <constraint firstItem="daX-9a-mbT" firstAttribute="top" secondItem="bah-qv-ecp" secondAttribute="top" constant="8" id="kDg-Uc-duM"/>
+                                                <constraint firstAttribute="trailing" secondItem="daX-9a-mbT" secondAttribute="trailing" constant="8" id="umM-GX-p0b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="paO-sN-JZB" id="3iA-ry-nvU"/>
+                            <outlet property="delegate" destination="paO-sN-JZB" id="Grq-47-PQa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add New Album" id="Nzz-3o-5ih"/>
+                    <connections>
+                        <outlet property="addAlbumTextFIeld" destination="JqJ-qF-CRC" id="NLC-mj-JRf"/>
+                        <outlet property="mapView" destination="Xwd-Z3-3NB" id="bmT-g0-iEU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pu-wc-oAB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5750" y="225"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LGk-rA-UuV">
+            <objects>
+                <tabBarController id="Kdo-1F-84e" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VW2-wk-t9C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BOs-C6-srZ" kind="relationship" relationship="viewControllers" id="17V-gA-o4K"/>
+                        <segue destination="7OB-N9-vg7" kind="relationship" relationship="viewControllers" id="mDP-gS-94H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuW-Pm-ekm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="-82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="rectangle.stack" catalog="system" width="126" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

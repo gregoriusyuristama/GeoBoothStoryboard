@@ -17,15 +17,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    fileprivate func setupMapView() {
-        mapView.mapType = MKMapType.standard
-        mapView.isZoomEnabled = true
-        mapView.isScrollEnabled = true
-        mapView.center = view.center
-        mapView.delegate = self
-        mapView.showsUserLocation = true
-    
-    }
     fileprivate func setupLocationManager() {
         LocationServices.shared.locationManager.requestWhenInUseAuthorization()
         LocationServices.shared.changeAuthDelegate = self

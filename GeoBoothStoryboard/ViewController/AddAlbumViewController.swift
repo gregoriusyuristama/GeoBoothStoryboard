@@ -2,7 +2,7 @@
 //  AddAlbumViewController.swift
 //  GeoBoothStoryboard
 //
-//  Created by Gregorius Yuristama Nugraha on 2/12/24.
+//  Created by Gregorius Yuristama Nugraha on 2/13/24.
 //
 
 import UIKit
@@ -11,11 +11,18 @@ class AddAlbumViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if #available(iOS 13.0, *) {
+            self.view.backgroundColor = .systemGray6
+        } else {
+            // Fallback on earlier versions
+        }
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func closeModal(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

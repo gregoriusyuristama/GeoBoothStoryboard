@@ -14,9 +14,14 @@
 		B6A167FA2B79A8F4001457B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6A167F92B79A8F4001457B0 /* Assets.xcassets */; };
 		B6A167FD2B79A8F4001457B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A167FB2B79A8F4001457B0 /* LaunchScreen.storyboard */; };
 		B6A168072B7A02CB001457B0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A168062B7A02CB001457B0 /* MapViewController.swift */; };
-		B6A168092B7A02D7001457B0 /* AddAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A168082B7A02D7001457B0 /* AddAlbumViewController.swift */; };
+		B6A168092B7A02D7001457B0 /* AddAlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A168082B7A02D7001457B0 /* AddAlbumTableViewController.swift */; };
 		B6A1680E2B7A0753001457B0 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1680D2B7A0752001457B0 /* LocationServices.swift */; };
 		B6A168112B7A076B001457B0 /* ChangeLocationAuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A168102B7A076B001457B0 /* ChangeLocationAuthDelegate.swift */; };
+		B6A1687C2B7BA310001457B0 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1687B2B7BA310001457B0 /* ResourcePath.swift */; };
+		B6A1687E2B7BA31B001457B0 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1687D2B7BA31B001457B0 /* AppLabel.swift */; };
+		B6A168822B7BA34B001457B0 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A168812B7BA34B001457B0 /* UIImage+Resize.swift */; };
+		B6A168842B7BA353001457B0 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A168832B7BA353001457B0 /* UIImage+Color.swift */; };
+		B6A168882B7BB715001457B0 /* AddAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A168872B7BB715001457B0 /* AddAlbumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +34,14 @@
 		B6A167FC2B79A8F4001457B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6A167FE2B79A8F4001457B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6A168062B7A02CB001457B0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		B6A168082B7A02D7001457B0 /* AddAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbumViewController.swift; sourceTree = "<group>"; };
+		B6A168082B7A02D7001457B0 /* AddAlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbumTableViewController.swift; sourceTree = "<group>"; };
 		B6A1680D2B7A0752001457B0 /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		B6A168102B7A076B001457B0 /* ChangeLocationAuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationAuthDelegate.swift; sourceTree = "<group>"; };
+		B6A1687B2B7BA310001457B0 /* ResourcePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcePath.swift; sourceTree = "<group>"; };
+		B6A1687D2B7BA31B001457B0 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
+		B6A168812B7BA34B001457B0 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		B6A168832B7BA353001457B0 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		B6A168872B7BB715001457B0 /* AddAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				B6A167FE2B79A8F4001457B0 /* Info.plist */,
-				B6A168052B7A02B6001457B0 /* ViewController */,
 				B6A168042B7A02AB001457B0 /* App */,
-				B6A1680B2B7A0449001457B0 /* Utilities */,
-				B6A167F62B79A8F3001457B0 /* Main.storyboard */,
-				B6A167F92B79A8F4001457B0 /* Assets.xcassets */,
-				B6A167FB2B79A8F4001457B0 /* LaunchScreen.storyboard */,
+				B6A1687F2B7BA32C001457B0 /* Core */,
+				B6A168852B7BA513001457B0 /* View */,
+				B6A168052B7A02B6001457B0 /* ViewController */,
 			);
 			path = GeoBoothStoryboard;
 			sourceTree = "<group>";
@@ -89,7 +97,8 @@
 			children = (
 				B6A167F42B79A8F3001457B0 /* CollectionViewController.swift */,
 				B6A168062B7A02CB001457B0 /* MapViewController.swift */,
-				B6A168082B7A02D7001457B0 /* AddAlbumViewController.swift */,
+				B6A168082B7A02D7001457B0 /* AddAlbumTableViewController.swift */,
+				B6A168872B7BB715001457B0 /* AddAlbumViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -117,6 +126,52 @@
 				B6A168102B7A076B001457B0 /* ChangeLocationAuthDelegate.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B6A1687A2B7BA2FA001457B0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B6A1687B2B7BA310001457B0 /* ResourcePath.swift */,
+				B6A1687D2B7BA31B001457B0 /* AppLabel.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B6A1687F2B7BA32C001457B0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B6A168862B7BA529001457B0 /* Resources */,
+				B6A1687A2B7BA2FA001457B0 /* Constants */,
+				B6A168802B7BA338001457B0 /* Extensions */,
+				B6A1680B2B7A0449001457B0 /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B6A168802B7BA338001457B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6A168812B7BA34B001457B0 /* UIImage+Resize.swift */,
+				B6A168832B7BA353001457B0 /* UIImage+Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6A168852B7BA513001457B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6A167FB2B79A8F4001457B0 /* LaunchScreen.storyboard */,
+				B6A167F62B79A8F3001457B0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6A168862B7BA529001457B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6A167F92B79A8F4001457B0 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,10 +245,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A168882B7BB715001457B0 /* AddAlbumViewController.swift in Sources */,
 				B6A167F52B79A8F3001457B0 /* CollectionViewController.swift in Sources */,
-				B6A168092B7A02D7001457B0 /* AddAlbumViewController.swift in Sources */,
+				B6A1687E2B7BA31B001457B0 /* AppLabel.swift in Sources */,
+				B6A168092B7A02D7001457B0 /* AddAlbumTableViewController.swift in Sources */,
+				B6A168822B7BA34B001457B0 /* UIImage+Resize.swift in Sources */,
+				B6A1687C2B7BA310001457B0 /* ResourcePath.swift in Sources */,
 				B6A168112B7A076B001457B0 /* ChangeLocationAuthDelegate.swift in Sources */,
 				B6A167F12B79A8F3001457B0 /* AppDelegate.swift in Sources */,
+				B6A168842B7BA353001457B0 /* UIImage+Color.swift in Sources */,
 				B6A167F32B79A8F3001457B0 /* SceneDelegate.swift in Sources */,
 				B6A1680E2B7A0753001457B0 /* LocationServices.swift in Sources */,
 				B6A168072B7A02CB001457B0 /* MapViewController.swift in Sources */,
